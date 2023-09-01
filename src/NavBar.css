@@ -1,0 +1,12 @@
+.custom-navbar {
+    background-color: #000000; 
+    color: #fff; 
+}
+.nav-link {
+    transition: transform 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+  /* Estilo al pasar el mouse por encima */
+.nav-link:hover {
+    transform: scale(1.1); 
+    text-decoration: underline; 
+}
