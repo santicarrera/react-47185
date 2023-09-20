@@ -1,0 +1,31 @@
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    height: 100vh; /* Ajusta la altura para centrar verticalmente */
+}
+
+.producto-card {
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* Ancho de la tarjeta */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.producto-card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto-content {
+    padding: 20px;
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.producto-content img {
+    max-width: 100%; /* La imagen no superará el ancho de la tarjeta */
+    max-height: 200px; /* Altura máxima de la imagen (ajusta según tus preferencias) */
+}
