@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     height: 100vh; /* Ajusta la altura para centrar verticalmente */
 }
 
@@ -10,7 +10,6 @@
     background-color: #fff; /* Color de fondo de la tarjeta */
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 300px; /* Ancho de la tarjeta */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -28,4 +27,11 @@
 .producto-content img {
     max-width: 100%; /* La imagen no superará el ancho de la tarjeta */
     max-height: 200px; /* Altura máxima de la imagen (ajusta según tus preferencias) */
+}
+
+.descripcion {
+    text-align: center; /* Alinea el texto de la descripción al centro */
+    max-width: 80%; /* Establece el ancho máximo para evitar que ocupe todo el ancho */
+    margin: 0 auto; /* Centra horizontalmente el elemento */
+    padding: 10px; /* Agrega un poco de espacio alrededor del texto */
 }
