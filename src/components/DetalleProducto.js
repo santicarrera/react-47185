@@ -9,7 +9,7 @@ const DetalleProducto = () => {
 
   return (
     <div className="text-center">
-      <h1>Detalle del Producto</h1>
+      <h1>"Lo Nuevo"</h1>
       {producto ? (
         <div>
           <div className="producto-card">
