@@ -46,3 +46,25 @@
     text-align: center;
     margin: 20px 0px 20px;
 }
+select {
+    margin: 20px 0; /* Separación del borde superior e inferior */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde con color */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+  /* Estilos para el contenedor principal */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente para todo el cuerpo del documento */
+    background-color: #f5f5f5; /* Color de fondo de la página */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+}
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido en la página */
+    padding: 20px; /* Espaciado interno del contenedor */
+    background-color: #000; /* Color de fondo del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}

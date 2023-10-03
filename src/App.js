@@ -11,6 +11,7 @@ function App() {
     <div className='App'>
       <NavBar />
       <Routes>
+        <Route path="/" element={<ItemListContainer />} index={true} />
         <Route path="/home" element={<ItemListContainer />} />
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/producto/:id" element={<DetalleProducto />} />
