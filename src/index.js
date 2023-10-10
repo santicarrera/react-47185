@@ -4,10 +4,11 @@ import { BrowserRouter as Router } from 'react-router-dom'; // Importa el Router
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '../src/Firebase/config';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router> {}
+    <Router> 
       <App />
     </Router>
   </React.StrictMode>,

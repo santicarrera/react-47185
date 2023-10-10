@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
+import { useCart } from './CartContext';
 import '../DetalleProducto.css';
 
 const DetalleProducto = () => {
   const { id } = useParams();
   const location = useLocation();
   const { producto } = location.state || {};
-  
-  // Estado local para la cantidad de productos en el carrito
+
+  const {addToCart} = useCart();
   const [cantidad, setCantidad] = useState(1);
-
-  // Función para manejar el incremento de la cantidad
-  const aumentarCantidad = () => {
-    setCantidad(cantidad + 1);
-  };
-
-  // Función para manejar la disminución de la cantidad
-  const disminuirCantidad = () => {
-    if (cantidad > 1) {
-      setCantidad(cantidad - 1);
+  
+  const handleCantidadChange = (event) => {
+    const nuevaCantidad = parseInt(event.target.value, 10);
+    // Verificar si la nueva cantidad está dentro del stock disponible
+    if (nuevaCantidad <= producto.stock && nuevaCantidad > 0) {
+      setCantidad(nuevaCantidad);
     }
   };
+
+  const handleAgregarAlCarrito = () => {
+    // Verificar si la cantidad seleccionada está dentro del stock disponible
+    if (cantidad <= producto.stock && cantidad > 0) {
+      addToCart({ ...producto, cantidad: cantidad });
+    } else {
+      // Mostrar un mensaje de error o hacer algo cuando no hay suficiente stock
+      console.log('No hay suficiente stock');
+    }
+  };
+
 
   return (
     <div className="text-center">
@@ -33,12 +41,11 @@ const DetalleProducto = () => {
               <h2>{producto.nombre}</h2>
               <p>Precio: ${producto.precio}</p>
               <div className="cantidad-container">
-                <button className="cantidad-btn" onClick={disminuirCantidad}>-</button>
-                <span className="cantidad">{cantidad}</span>
-                <button className="cantidad-btn" onClick={aumentarCantidad}>+</button>
+              <label>Cantidad:</label>
+              <input type="number"value={cantidad} onChange={handleCantidadChange} min="1"/>
               </div>
               
-              <button className="btn btn-primary">Añadir al carrito</button>
+              <button className="btn btn-primary" onClick={handleAgregarAlCarrito}>Añadir al carrito</button>
             </div>
             <div className="descripcion">
               <h3>Características</h3>

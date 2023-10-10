@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { useCart } from './CartContext';
 
 const CartWidget = () => {
-    return (
-        <div>
-            <i class="bi bi-cart3"></i>
-            <span>1</span>
-        </div>
-    )
-}
+const { cart } = useCart();
+const totalItems = cart.reduce((total, product) => total + product.cantidad, 0);
 
-export default CartWidget
+return (
+    <div>
+        <i className="bi bi-cart3"></i>
+        <span>{totalItems}</span>
+    </div>
+    );
+};
+
+export default CartWidget;
