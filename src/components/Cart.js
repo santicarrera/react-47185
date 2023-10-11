@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import '../Cart.css';
 
 const Cart = () => {
 const { cart, removeFromCart } = useCart();
-
 const total = cart.reduce((acc, product) => acc + product.precio * product.cantidad, 0);
 
 const handleRemoveFromCart = (productId) => {
@@ -25,6 +25,9 @@ return (
         ))}
         <div className="total">
             <h3>Total a Pagar: ${total}</h3>
+        </div>
+        <div className="checkout-button">
+            {cart.length > 0 && <Link to="/checkout">Finalizar Compra</Link>}
         </div>
     </div>
 );

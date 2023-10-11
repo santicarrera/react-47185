@@ -42,6 +42,7 @@ const Catalogo = () => {
     <div>
       <h1>Catálogo de Productos</h1>
       <select value={categoria} onChange={handleCategoriaChange}>
+        <option value="">Todo</option>
         <option value="zapatillas">Zapatillas</option>
         <option value="buzos">Buzos</option>
         <option value="camisetas">Camisetas</option>

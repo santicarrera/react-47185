@@ -14,8 +14,12 @@ const removeFromCart = (productId) => {
     setCart(updatedCart);
 };
 
+const vaciarCarrito = () => {
+    setCart([]);
+};
+
 return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, vaciarCarrito}}>
         {children}
     </CartContext.Provider>
 );

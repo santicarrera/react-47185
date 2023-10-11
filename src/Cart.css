@@ -15,11 +15,12 @@
 }
 
 .cart-item img {
-    width: 100px; 
-    height: 100px;
+    width: 200px; 
+    height: 200px;
     object-fit: cover; 
 }
 
 .cart-item h2 {
     margin-bottom: 10px;
+    width: 200px;
 }
