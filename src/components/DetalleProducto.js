@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { useCart } from './CartContext';
 import '../DetalleProducto.css';
+import { getFirestore } from "firebase/firestore";
+import { app, db } from "../Firebase/config";
+
+
 
 const DetalleProducto = () => {
   const { id } = useParams();

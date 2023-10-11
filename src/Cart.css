@@ -15,9 +15,9 @@
 }
 
 .cart-item img {
-    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 100px; 
     height: 100px;
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción y se ajuste dentro del contenedor */
+    object-fit: cover; 
 }
 
 .cart-item h2 {
