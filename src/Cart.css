@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    align-items: flex-start;
+    margin: 20px 50px;
 }
 
 .cart-item {
@@ -19,8 +19,39 @@
     height: 200px;
     object-fit: cover; 
 }
-
 .cart-item h2 {
     margin-bottom: 10px;
     width: 200px;
+}
+.checkout-button a {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 18px; /* Tamaño del texto */
+    text-decoration: none; /* Sin subrayado en el texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.checkout-button a:hover {
+    background-color: #002fff; /* Color de fondo al pasar el mouse sobre el botón */
+}
+.seguir-comprando-button a {
+    background-color: #00ff3c; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 18px; /* Tamaño del texto */
+    text-decoration: none; /* Sin subrayado en el texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.seguir-comprando-button a:hover {
+    background-color: #0d7c1f8f; /* Color de fondo al pasar el mouse sobre el botón */
+}
+.container-buttons{
+    display: flex;
+    gap: 10px;
 }

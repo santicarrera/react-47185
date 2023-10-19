@@ -1,0 +1,24 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Cambia el color de fondo de las flechas */
+  width: 40px; /* Ancho de las flechas */
+  height: 40px; /* Altura de las flechas */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.0); /* Cambia el color de fondo de las áreas de las flechas */
+}
+
+.w-75.h-50::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad del 50% */
+}
+.carousel-caption h3 {
+    color: rgb(0, 0, 0); /* Cambiar el color del texto */
+}

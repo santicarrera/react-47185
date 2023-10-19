@@ -26,8 +26,13 @@ return (
         <div className="total">
             <h3>Total a Pagar: ${total}</h3>
         </div>
+        <div className='container-buttons'>
         <div className="checkout-button">
             {cart.length > 0 && <Link to="/checkout">Finalizar Compra</Link>}
+        </div>
+        <div className='seguir-comprando-button'>
+            <Link to="/catalogo">Seguir Comprando</Link>
+        </div>
         </div>
     </div>
 );

@@ -14,7 +14,7 @@
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex; /* Usar flexbox para centrar verticalmente */
     flex-direction: column; /* Apilar elementos verticalmente */
-    align-items: center; /* Centrar elementos horizontalmente */
+    align-items: flex-start; /* Centrar elementos horizontalmente */
 }
 
 .producto-card a {

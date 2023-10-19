@@ -6,12 +6,24 @@ export const CartProvider = ({ children }) => {
 const [cart, setCart] = useState([]);
 
 const addToCart = (product) => {
-    setCart([...cart, product]);
+    // Verificar si el producto ya está en el carrito
+    const existingProduct = cart.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      // Si el producto ya está en el carrito, incrementar la cantidad
+    setCart((prevCart) =>
+        prevCart.map((item) =>
+        item.id === product.id ? { ...item, cantidad: item.cantidad + 1 } : item
+        )
+    );
+    } else {
+      // Si el producto no está en el carrito, agregarlo con cantidad 1
+    setCart([...cart, { ...product, cantidad: 1 }]);
+    }
 };
 
 const removeFromCart = (productId) => {
-    const updatedCart = cart.filter((product) => product.id !== productId);
-    setCart(updatedCart);
+    setCart((prevCart) => prevCart.filter((product) => product.id !== productId));
 };
 
 const vaciarCarrito = () => {
